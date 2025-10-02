@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right center;
+  display: flex;
+  justify-content: center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  width: auto;
+  padding: 16px 0px;
+  margin: 0;
+  background-image: linear-gradient(to right, #ffc72c, #007fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+span {
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-1 {
+  border: white 4px solid;
+  cursor: pointer;
+}
+
+#section-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 768px;
+}
+
+#section-1 > h1 {
+  font-size: 40px;
+}
+
+#section-2 > div > h1 {
+  font-size: 36px;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+#text-container > span {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: white solid 1px;
+  border-radius: 16px;
+  padding: 4px 16px;
+  height: 36px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#jpn-text {
+  font-weight: bold;
+  color: #ffc72c;
+}
+#romaji-text {
+  color: #fff;
+}
+#es-text {
+  font-style: italic;
+  color: #007fff;
+}
+
+button {
+  width: 100%;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: white solid 1px;
+  border-radius: 16px;
+  color: white;
+  margin-top: 30px;
+}
+
+button:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (min-width: 480px) {
+  #section-1 > h1 {
+    font-size: 48px;
+  }
+
+  #section-2 > div > h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-position: center center;
+  }
+  #section-1 > h1 {
+    font-size: 60px;
+  }
+
+  #section-2 > div > h1 {
+    font-size: 60px;
+  }
+  button {
+    max-width: 50%;
+  }
+}
