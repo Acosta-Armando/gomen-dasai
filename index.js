@@ -4,7 +4,7 @@ const jpnText = document.getElementById('jpn-text')
 const romajiText = document.getElementById('romaji-text')
 const esText = document.getElementById('es-text')
 const repeatButton = document.getElementById('repeat-button')
-const audio = new Audio('/assets/audio.mp3')
+const audio = new Audio('./assets/audio.mp3')
 
 const syncData = [
   {
@@ -71,7 +71,6 @@ const startSync = () => {
   }
   syncInterval = setInterval(syncLyrics, 100)
   updateText(0)
-  audio.play()
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -81,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   section1.addEventListener('click', () => {
     section1.style.display = 'none'
     section2.style.display = 'flex'
+    audio.play()
     startSync()
   })
 
