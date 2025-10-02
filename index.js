@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   repeatButton.addEventListener('click', () => {
     audio.pause()
     audio.currentTime = 0
+    audio.play()
     startSync()
   })
 
